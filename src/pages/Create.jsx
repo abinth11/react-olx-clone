@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import Header from "../components/Header/Header";
 import Create from "../components/Create/Create";
-
+import { AuthContext } from "../store/Context";
+import LoginPages from "./Login";
 const CreatePage = () => {
+    const { user } = useContext(AuthContext);
     return (
         <>
-            <Header />
-            <Create />
+            {
+                user ? <>
+                    <Header />
+                    <Create />
+                </> : <LoginPages />
+            }
         </>
     )
 }

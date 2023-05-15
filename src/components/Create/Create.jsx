@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 const Create = () => {
   const { firebase } = useContext(FirebaseContext)
   const { user } = useContext(AuthContext)
+  const [imageSelected, setImageSelected] = useState(false)
   const [productName, setProductName] = useState('')
   const [category, setCategory] = useState('')
   const [productPrice, setProductPrice] = useState('')
@@ -21,7 +22,7 @@ const Create = () => {
           category,
           productPrice,
           url,
-          userId: user.uid,
+          userId: user?.uid,
           createdAt: new Date().toDateString()
         })
         navigate('/')
@@ -62,11 +63,18 @@ const Create = () => {
           <input value={productPrice} onChange={(e) => setProductPrice(e.target.value)} className="input form-control form-control-md" type="number" id="fname" name="Price" />
           <br />
           <br />
-          <img alt="Posts" width="200px" height="200px" src={productImage ? URL.createObjectURL(productImage) : ''}></img>
+          {
+            imageSelected && <>
+              <img alt="Posts" width="200px" height="200px" src={productImage ? URL.createObjectURL(productImage) : ''}></img>
+              <br />
+            </>
+          }
+          <input className="file-input" onChange={(e) => {
+            setProductImage(e.target.files[0])
+            setImageSelected(true)
+          }} type="file" />
           <br />
-          <input onChange={(e) => setProductImage(e.target.files[0])} type="file" />
-          <br />
-          <button onClick={productSubmitHandler} className="uploadBtn  btn">upload and Submit</button>
+          <button onClick={productSubmitHandler} className="uploadBtn  btn">Submit</button>
         </div>
       </card>
     </>
