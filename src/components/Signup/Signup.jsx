@@ -28,9 +28,9 @@ const Signup = () => {
   }
   return (
     <>
-      <div>
+      <div style={{marginBottom:"50px"}}>
         <div className="signupParentDiv">
-          <img className='logo-img' src={Logo} alt='not found'></img>
+          <img className='logo-img-signup' src={Logo} alt='not found'></img>
           <form onSubmit={handleSubmit}>
             <label>Username</label>
             <br />
@@ -84,7 +84,7 @@ const Signup = () => {
             <button className='btn btn-success'>Signup</button>
           </form>
           <div className='mt-3'>
-            <Link to='/login'>Login</Link>
+            <p>Already have an account?,<Link to='/login'>Login</Link></p>
           </div>
         </div>
       </div>
