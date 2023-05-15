@@ -1,11 +1,12 @@
 .loginParentDiv {
-    border: 1px solid rgb(25, 20, 20);
+    border: 1px  rgb(25, 20, 20);
     width: 400px;
     padding: 30px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    box-shadow: 2px 0px 4px 6px rgba(0, 0, 0, 0.2);
     border-radius: 6px;
   }
   
@@ -18,6 +19,9 @@
     border-left-color: transparent;
     border-right-color: transparent;
     outline-color: transparent;
+  }
+  .loginParentDiv > input {
+    border: 1px solid;
   }
   
   .loginParentDiv button {
@@ -34,9 +38,11 @@
     border: 2px solid #002f34;
   }
   
-  .loginParentDiv a {
+  .loginParentDiv p {
     display: flex;
     justify-content: center;
+    color: #002f34;
     cursor: pointer;
   }
+
   

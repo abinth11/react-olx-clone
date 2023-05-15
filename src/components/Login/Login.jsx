@@ -51,7 +51,7 @@ const Login = () => {
             <button className="btn btn-success">Login</button>
           </form>
           <div className="mt-3 mb-3">
-            <Link to='/signup'>Signup</Link>
+            <p>Don't have an account ?,<Link to='/signup'>Signup</Link></p>
           </div>
         </div>
       </div>

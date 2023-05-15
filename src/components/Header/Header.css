@@ -112,6 +112,7 @@
   }
   
   .loginPage a{
+    font-weight: bold;
     text-decoration: none;
     color: inherit;
     
