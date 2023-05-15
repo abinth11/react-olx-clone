@@ -1,5 +1,4 @@
 import React, { useState, useContext, useEffect } from 'react';
-
 import './View.css';
 import { PostContext } from '../../store/PostContext';
 import { FirebaseContext } from '../../store/Context';
@@ -38,12 +37,13 @@ const View = () => {
       <div className="rightSection">
         <div className="productDetails">
           <p>&#x20B9; {postDetails.productPrice} </p>
-          <span>{postDetails.productName}</span>
-          <p>{postDetails.category}</p>
-          <span>{postDetails.createdAt}</span>
+          <span>Product name: {postDetails.productName}</span>
+          {/* <p>{postDetails.category}</p> */}
+          <p></p>
+          <span>Uploaded at: {postDetails.createdAt}</span>
         </div>
         <div className="contactDetails">
-          <p>Seller details</p>
+          <p className='seller-title'>Seller details</p>
           <p>Name: {userDetails?.username}</p>
           <p>Mobile: {userDetails?.phone}</p>
         </div>

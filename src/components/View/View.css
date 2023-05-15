@@ -1,6 +1,7 @@
 .viewParentDiv {
     padding-top: 4em;
     display: flex;
+    font-weight: 500;
     overflow-x: hidden;
   }
   .viewParentDiv .imageShowDiv {
@@ -20,7 +21,8 @@
   }
   
   .viewParentDiv .rightSection .productDetails :first-child {
-    font-weight: 700;
+    font-weight: 700;   
+      
     margin-bottom: 8px;
     color: #002f34;
     font-size: 34px;
@@ -29,7 +31,7 @@
   }
   
   .viewParentDiv .rightSection .productDetails {
-    border: 1px solid black;
+    /* border: 1px  black; */
     padding: 6px;
     border-radius: 6px;
     margin-bottom: 2em;
@@ -37,16 +39,17 @@
   }
   
   .viewParentDiv .rightSection .contactDetails {
-    border: 1px solid black;
+    /* border: 1px  black; */
     padding: 6px;
     border-radius: 6px;
   }
   
   .viewParentDiv .rightSection .contactDetails :first-child {
-    font-size: 20px;
+    font-size: 23px;
     line-height: 24px;
-    font-weight: 700;
+    font-weight: bold;
     color: #002f34;
     font-weight: 400;
     padding: 0;
   }
+ 
